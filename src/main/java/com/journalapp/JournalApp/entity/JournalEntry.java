@@ -1,12 +1,15 @@
 package com.journalapp.JournalApp.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-// POJO class
+@Document(collection = "journal_entries")
 public class JournalEntry {
 
-    private long  id;
+    @Id
+    private String id;
     private String title;
-    private  String content;
+    private String content;
 
     public String getTitle() {
         return title;
@@ -24,11 +27,11 @@ public class JournalEntry {
         this.content = content;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 }
