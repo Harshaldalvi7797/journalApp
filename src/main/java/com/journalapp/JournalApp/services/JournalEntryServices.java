@@ -24,13 +24,15 @@ public class JournalEntryServices {
         return journalEntryRepository.findAll();
     }
 
-    public Optional<JournalEntry> getById(ObjectId id) {
+    public Optional<JournalEntry> findById(ObjectId id) {
         return journalEntryRepository.findById(id);
     }
 
     public void deleteById(ObjectId id) {
         journalEntryRepository.deleteById(id);
     }
+
+
 }
 
 
